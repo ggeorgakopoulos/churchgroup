@@ -1,0 +1,96 @@
+.group {
+  position: relative;
+  margin-bottom: 25px;
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+
+    font-size:  1.1rem;
+
+    &:focus ~ label,
+    &:valid ~ label{
+      top: -15px;
+
+      color: $primary-color;
+      font-size: .95rem;
+    }
+  }
+
+  label {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+
+    color: #999;
+    font-size: 1.05rem;
+    font-weight: normal;
+
+    @include transition(all .3s);
+    pointer-events: none;
+  }
+}
+
+.group-submit {
+  position: relative;
+  margin-bottom: 20px;
+  input {
+    width: 100%;
+  }
+}
+.group-halfed {
+  width: 49.4%;
+  display: inline-block;
+}
+
+::-webkit-input-placeholder {
+  font-family: $font-family;
+  font-size: 1.05rem;
+  color: #999;
+}
+/* Bottom bar */
+.bar 	{
+  position: relative;
+  display: block;
+  width: 100%;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+
+    background-color: $primary-color;
+    @include transition(.2s ease all);
+  }
+  &:before {
+    left:50%;
+  }
+  &:after {
+    right:50%;
+  }
+}
+.group input:focus ~ .bar:before,
+.group input:focus ~ .bar:after {
+  width:50%;
+}
+
+.form-error {
+  color: #dd2c00;
+  font-size: 15px;
+  text-align: left;
+  margin: 0 0 24px 5px;
+}
+.form-success {
+  color: #19a093;
+  font-size: 15px;
+  text-align: left;
+  margin: 0 0 24px 5px;
+}
+

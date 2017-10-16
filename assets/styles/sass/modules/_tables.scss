@@ -1,0 +1,45 @@
+h1.table-title {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: lighten($b_on_w, 10%);
+}
+table {
+  max-width: 970px;
+  width: auto;
+  overflow: hidden;
+
+  border-collapse: collapse;
+  @include border-radius(2px);
+  background-color: $white;
+  @include materialBoxShadow(1);
+
+  tr {
+    &:last-child {
+      border-bottom: none;
+    }
+    &:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    td.action {
+      font-size: 1.5rem;
+      padding: 0;
+      text-align: center;
+      vertical-align: middle;
+
+      i:hover {
+        cursor: pointer;
+      }
+
+    }
+  }
+  th {
+    text-align: left;
+    white-space: nowrap;
+  }
+  th,td {
+    padding: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

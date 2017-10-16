@@ -1,0 +1,48 @@
+/*BUTTONS*/
+.btn-shadow {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.14);
+  transition: .5s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.15);
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin: 0;
+  padding: 8px 35px;
+  overflow: hidden;
+  @include border-radius(2px);
+
+  border: none;
+  @include materialBoxShadow(2);
+
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  @include user-select();
+  @include transition(all .5s);
+
+  &:hover {
+    cursor: pointer;
+    @include materialBoxShadow(3);
+    @include transition(all .5s);
+  }
+  &:focus {
+    cursor: pointer;
+    @include materialBoxShadow(3);
+    @include transition(all .5s);
+  }
+}
+.btn-default {
+  background-color: lighten($primary-color, 10%);
+  color: $white;
+  &:hover {
+    background-color: $primary-color;
+    @include transition(all .5s);
+  }
+}

@@ -1,0 +1,55 @@
+#login-page {
+  background: url(../img/l-r-bg.jpg) center center fixed no-repeat;
+  background-size: cover;
+
+  h1.title {
+    margin: 30px 0;
+
+    color: $white;
+    font-weight: 500;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+}
+#register-page {
+  @extend #login-page;
+}
+
+.login, .register{
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 30px;
+  overflow-y: auto;
+
+  background-color: rgba(255, 255, 255, 0.95);
+
+  @include materialBoxShadow(2);
+  @include border-radius(2px);
+
+  h1 {
+    font-weight: 500;
+    color: $b_on_w;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+.login {
+  width: 350px;
+}
+.register {
+  width: 400px;
+}
+
+#author {
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  @include border-radius(2px);
+  @include materialBoxShadow(2);
+
+  color: $b_on_w;
+  text-align: center;
+  font-size: 1.3rem;
+}
